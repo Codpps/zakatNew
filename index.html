@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat17</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/penghasilan.css" />
+    <link rel="stylesheet" href="css/emas.css" />
+    <link rel="stylesheet" href="css/tabungan.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/note.css">
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <h1 id="me">dpps</h1>
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item">
+              <a class="navbar-link" href="#penghasilan">ZAKAT</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#note">NOTE</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="penghasilan">
+      <div class="grid-container">
+        <div class="card">
+          <h1>Zakat Mall</h1>
+          <div class="inputan">
+            <label for="nama">Penghasilan:</label>
+            <input
+              type="text"
+              id="gaji"
+              placeholder="Masukan penghasilan anda"
+              oninput="formatRupiah(this);jumlah();"
+            />
+          </div>
+          <div class="inputan">
+            <label for="email">Pendapatan lain: (Bonus, THR)</label>
+            <input
+              type="text"
+              id="bonus"
+              placeholder="*Jika ada"
+              oninput="formatRupiah(this);jumlah();"
+            />
+          </div>
+          <div class="inputan">
+            <label for="pengeluaran">Pengeluaran:</label>
+            <input
+              type="text"
+              id="pengeluaran"
+              placeholder="*Jika ada"
+              oninput="formatRupiah(this);jumlah();"
+            />
+          </div>
+          <div class="jawaban">
+            <label for="hasil">Wajib membayar:</label>
+            <span id="hasil"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="emas">
+      <div class="grid-container">
+        <div class="card">
+          <h1>Zakat Emas</h1>
+          <div class="inputan">
+            <label for="nama">Jumlah emas: (per gram)</label>
+            <input
+              type="text"
+              id="inputEmas"
+              placeholder="Masukan total berat emas anda"
+              oninput="addGramText(); jumlahZakatEmas();"
+            />
+          </div>
+          <div class="jawaban">
+            <label for="hasil">Wajib membayar:</label>
+            <span id="hasilEmas"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tabungan">
+      <div class="gridContainer">
+        <div class="card">
+          <h1>Zakat Tabungan</h1>
+          <div class="inputan-tabungan">
+            <label for="InptTabungan">Saldo Tabungan:</label>
+            <input
+              type="text"
+              id="InptTabungan"
+              placeholder="Masukan jumlah tabungan"
+              oninput="formatRupiah(this); jumlahTbngan();"
+            />
+          </div>
+          <div class="inputan-tabungan">
+            <label for="InptTabungan">Bunga Tabungan:</label>
+            <input
+              type="text"
+              id="bngTabungan"
+              placeholder="*Jika ada"
+              oninput="addPersen(); jumlahTbngan();"
+            />
+          </div>
+          <div class="jawaban">
+            <label for="hasil">Wajib membayar:</label>
+            <span id="hasilTabungan"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="note">
+      <div class="gridContainer">
+        <div class="card">
+          <ul class="zakat-list">
+            <h1>NOTE ZAKAT 17</h1>
+            <li>
+              <p>Zakat Penghasilan</p>
+              <ul>
+                <li>Nisab Rp7.000.000</li>
+              </ul>
+            </li>
+            <li>
+             <p>Zakat Emas</p>
+              <ul>
+                <li>Nisab 85 gram per tahun</li>
+              </ul>
+            </li>
+            <li>
+            <p>Zakat Tabungan</p>
+              <ul>
+                <li>Nisab Rp97.070.000 per tahun</li>
+              </ul>
+            </li>
+          </ul>          
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="navigation">
+      <ul>
+        <li class="list" style="--clr: #efd41f">
+          <a href="#emas" onclick="changePage('emas')"
+            ><span class="icon"><img src="assets/emas.png" alt="" /></span
+          ></a>
+        </li>
+        <li class="list active" style="--clr: #0fc70f">
+          <a href="#penghasilan" onclick="changePage('penghasilan')"
+            ><span class="icon"
+              ><img src="assets/penghasilan.png" alt="" /></span
+          ></a>
+        </li>
+        <li class="list" style="--clr: red">
+          <a href="#tabungan" onclick="changePage('tabungan')"
+            ><span class="icon"><img src="assets/tabungan.png" alt="" /></span
+          ></a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/penghasilan.js"></script>
+    <script src="js/emas.js"></script>
+    <script src="js/tabungan.js"></script>
+  </body>
+</html>

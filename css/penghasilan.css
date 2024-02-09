@@ -1,0 +1,58 @@
+#penghasilan {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #d6dbdb;
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  text-align: left;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 5px;
+}
+
+.inputan {
+  margin-bottom: 15px;
+}
+
+.inputan label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.inputan input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1.6px solid #ccc;
+  border-radius: 0;
+  outline: none;
+}
+
+.inputan input:focus {
+  border-color: #3498db;
+}
+
+.jawaban {
+  text-align: center;
+}

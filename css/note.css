@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+  }
+  
+  #note {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #d6dbdb;
+  }
+  
+  .gridContainer {
+    text-align: center;
+  }
+  
+.zakat-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+
+  .zakat-list > li {
+    margin-bottom: 20px;
+  }
+  
+  .zakat-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+
+  .zakat-list ul > li {
+    margin-left: 80px;
+    font-style: italic;
+  }
+  .zakat-list p {
+    font-weight: bold;
+    margin-left: 50px;
+  }
+  h1 {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
